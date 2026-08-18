@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><center>My JavaScript program </center></h1>
+    <!-- <h1><center>My JavaScript program </center></h1>
     <hr>
     <center><button onclick="runCode()">Run Code</button></center>
     <p id="output"></p>
@@ -101,7 +101,31 @@ function setUpevent(){
 }
 
 
+</script> -->
+
+<!-- <input type="text" id="input" placeholder="Enter your name">
+<p id="greet"></p>
+<script>
+    const input = document.getElementById("input");
+    const greet = document.getElementById("greet");
+    input.addEventListener("input",()=>{
+          greet.innerHTML=`Hello ${input.value}:`;
+    }); 
+    </script> -->
+
+<ul id ="Tasklist">
+    <li>Task 1</li>
+    <li>Task 2</li>
+    <li>Task 3</li>
+</ul>
+<script>
+    document.getElementById("Tasklist").addEventListener("click",(e) => {
+        if(e.target.tagName==="LI"){
+            e.target.remove();
+        }
+    });
 </script>
+
 
 </body>
 </html>
