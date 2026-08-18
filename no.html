@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>My JavaScript program </center></h1>
+    <hr>
+    <center><button onclick="runCode()">Run Code</button></center>
+    <p id="output"></p>
+
+    <script>
+        function runCode(){
+        
+        let age=20;
+        let name="Akshansh";
+        let isStudent=true;
+        document.getElementById("output").innerHTML="Name: "+name+", Age: "+age+", Is Student: "+isStudent;
+        }
+
+    </script>
+
+    <center><button onclick="Calculate()">Run Code</button></center>
+    <p id="result"></p>
+
+    <script>
+        function Calculate(){
+            let num1=10;
+            let num2=20;
+            let sum=num1+num2;
+            document.getElementById("result").innerHTML="The sum of "+num1+" and "+num2+" is: "+sum;
+        }
+    </script>
+
+  <center><button onclick="Multiply()">Run Code</button></center>
+  <p id="multiplyResult"></p>
+
+    <script>
+        function Multiply(){
+            let num1=5;
+            let num2=10;
+            let product=num1*num2;
+            document.getElementById("multiplyResult").innerHTML="The product of "+num1+" and "+num2+" is: "+product;
+        }
+    </script>
+
+<center><button onclick="Ifelse()">Run Code</button></center>
+<p id="ifelseResult"></p>
+
+    <script>
+        function Ifelse(){
+            let age=20;
+            if(age>=18){
+                document.getElementById("ifelseResult").innerHTML="You are eligible to vote.";
+            }else if(age>=18&&age<=21){
+                document.getElementById("ifelseResult").innerHTML="You are eligible to vote but not to drink.";
+        }else{
+                document.getElementById("ifelseResult").innerHTML="You are not eligible to vote.";
+            }
+        }
+    </script>
+
+<center><button onclick="Array()">Run Code</button></center>
+<p id="arrayResult"></p>
+
+    <script>
+        function Array(){
+            let fruits=["Apple","Banana","Mango","Orange"];
+            let firstFruit=fruits[0];
+            let totalFruits=fruits.length;
+            fruits.push("Grapes");
+            document.getElementById("arrayResult").innerHTML="First Fruit: "+firstFruit+", Total Fruits: "+totalFruits+", All Fruits: "+fruits.join(", ");
+        }
+    </script>
+
+<h2>TEMPLATE LITERALS EXAMPLE</h2>
+<center><button onclick="TemplateLiterals()">Run Code</button></center>
+<p id="templateResult"></p>
+
+    <script>
+        function TemplateLiterals(){
+            let name="Akshansh";
+            let age=20;
+            let message=`My name is ${name} and I am ${age} years old.`;
+            document.getElementById("templateResult").innerHTML=message;
+
+        }
+    </script>
+
+<h2>EVENT EXAMPLE</h2>
+<center><button onclick="EventExample()">Run Code</button></center>
+<p id="eventResult"></p>
+
+    <script>
+        function EventExample(){
+            document.getElementById("eventResult").innerHTML="Button Clicked!";
+        }
+    </script>
+
+<h2>CLASS EXAMPLE</h2>
+<center><button onclick="runcode10()">Run Code</button></center>
+<p id="result10"></p>
+
+<script>
+    function runcode10(){
+    class Student {
+        constructor(name, age, marks) {
+            this.name = name;
+            this.age = age;
+            this.marks = marks;
+        }
+
+        showResult() {
+           return this.name + " is " + this.age + " years old and scored " + this.marks + " marks.";
+        }
+    }
+
+    let student1 = new Student("Akshansh", 20, 99);
+    document.getElementById("result10").innerHTML=student1.showResult();
+    }
+</script>
+
+</body>
+</html>
