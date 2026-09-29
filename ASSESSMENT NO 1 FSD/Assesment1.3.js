@@ -1,0 +1,20 @@
+// eventLoop.js
+console.log('Script start');
+
+setTimeout(() => {
+  console.log('setTimeout (0 ms)');
+}, 0);
+
+setImmediate(() => {
+  console.log('setImmediate');
+});
+
+Promise.resolve().then(() => {
+  console.log('Promise.then (microtask)');
+});
+
+process.nextTick(() => {
+  console.log('process.nextTick');
+});
+
+console.log('Script end');
